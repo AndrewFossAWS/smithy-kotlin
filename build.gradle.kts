@@ -160,3 +160,7 @@ tasks.register<JavaExec>("ktlintFormat") {
     main = "com.pinterest.ktlint.Main"
     args = listOf("-F") + lintPaths
 }
+
+tasks.register<GradleBuild>("printSmithyVersion") {
+    println(">>>> " + this.project.property("smithyVersion"))
+}
